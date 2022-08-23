@@ -61,7 +61,7 @@
     codiceFiscale.style.display="none";
     console.log(codiceFiscale)
     form.addEventListener("submit", (e)=>{
-        codiceFiscale.style.display = "none"
+
         e.preventDefault();
         hideErrors()
         const isTheFormValid = validateForm();
