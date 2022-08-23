@@ -132,6 +132,7 @@ button[type=submit]{
     height: 49px;
     border: 1px solid gray;
     border-radius: 3px;
+    color: black!important;
 }
 button[type=submit]:hover{
     height: 49px;
@@ -168,6 +169,7 @@ button[type=submit]:active{
 .codiceFiscale h2{
     word-break: break-word;
 }
+
 @media screen and (max-width: 1000px){
     .dataDiNascitaSesso{
         flex-wrap: wrap;
