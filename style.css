@@ -190,6 +190,9 @@ button[type=submit]:active{
     h2{
        font-size:  20px;
     }
+    main{
+        width: 80%;
+    }
 }
 
 
