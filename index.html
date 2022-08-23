@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codice Fiscale - Online</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js">
+    </script>
+</head>
+<body>
+<header>
+    <nav>
+
+    </nav>
+</header>
+<main>
+    <h1>Codice Fiscale</h1>
+    <form>
+        <div class="nomeCognome">
+            <div class="nome">
+                <label for="nome">Nome</label>
+                <input name="nome" id="nome" type="text">
+                <span id="errName" class="errorMessage"></span>
+            </div>
+
+
+            <div class="cognome">
+                <label for="cognome">Cognome</label>
+                <input name="cognome" id="cognome" type="text">
+                <span id="errLastName" class="errorMessage"></span>
+            </div>
+
+
+        </div>
+        <div class="dataDiNascitaSesso">
+            <div class="dataDiNascita">
+                <label for="data-di-nascita">Data di Nascita</label>
+                <input name="data-di-nascita" id="data-di-nascita" type="date">
+                <span id="errDateOfBirth" class="errorMessage"></span>
+            </div>
+            <fieldset class="sesso" data-role="controlgroup">
+                <div class="mF">
+                    <div>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Maschio</label>
+
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Femmina</label>
+                    </div>
+                </div>
+
+
+                <span id="errGender" class="errorMessage"></span>
+            </fieldset>
+        </div>
+        <div class="paeseDiNascita">
+            <label for="paesiEsteri">Paese di Nascita</label>
+            <select name="paesiEsteri" id="paesiEsteri">
+                <option value="ITALIA" id="italia">ITALIA</option>
+            </select>
+        </div>
+
+        <div class="provincia">
+            <label for="comuneDiNascita">Comune / Città</label>
+            <select name="comuneDiNascita" id="comuneDiNascita">
+
+            </select>
+<!--            <label for="provinciaComuneSigla">Provincia in sigla Esempio : TO</label>
+            <input name="provinciaComuneSigla" id="provinciaComuneSigla" type="text">-->
+        </div>
+        <button type="submit" >Submit</button>
+    </form>
+    <div class="codiceFiscale">
+        <p>Codice Fiscale : </p>
+        <h2 id="codice-fiscale"></h2>
+    </div>
+</main>
+<footer>
+<p>Developed By Omrane Haj Mohamed</p>
+</footer>
+<script src="main.js">
+</script>
+</body>
+</html>

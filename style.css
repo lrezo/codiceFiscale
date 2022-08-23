@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+h1{
+    word-break: break-word;
+}
+footer{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+.errorMessage{
+    color: red;
+    margin-top: .5rem;
+}
+.provincia{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+main{
+    width: 50%;
+    margin: auto;
+}
+select{
+    width: 100%;
+}
+span[class="select2-selection__rendered"]{
+
+}
+.nomeCognome{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.nomeCognome input{
+
+    padding: .5rem 1rem;
+}
+.nomeCognome label{
+    margin-bottom: .3rem;
+}
+.nome, .cognome{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.cognome{
+    margin-bottom: 1rem;
+}
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.dataDiNascitaSesso{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto 1rem;
+}
+.dataDiNascita{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.dataDiNascita label{
+    margin-bottom: .3rem;
+}
+.sesso{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+.sesso div div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+.sesso .mF{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1rem;
+}
+.sesso input[type="radio"]{
+    appearance: none;
+    cursor: pointer;
+}
+.sesso label{
+    padding: .3rem;
+    cursor: pointer;
+}
+.sesso input[type="radio"]:checked + label {
+    border:3px solid gray;
+    color: black;
+    padding: .3rem;
+    transition: 50ms border linear;
+    border-radius: 3px;
+}
+.sesso input[type="radio"]:not(:checked) + label:hover {
+    background-color: lightgrey;
+    padding: .3rem;
+    border-radius: 3px;
+}
+button[type=submit]{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: white;
+    padding: 1rem;
+    height: 49px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+button[type=submit]:hover{
+    height: 49px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+button[type=submit]:active{
+    height: 49px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: #eeebeb;
+}
+.paeseDiNascita, .provincia{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 100%;
+}
+.selection{
+    width: 100%!important;
+}
+.provincia{
+    margin-top: 1rem;
+}
+.codiceFiscale{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.codiceFiscale h2{
+    word-break: break-word;
+}
+@media screen and (max-width: 1000px){
+    .dataDiNascitaSesso{
+        flex-wrap: wrap;
+
+    }
+    .sesso{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .mF div{
+        min-height: 36px!important;
+
+    }
+    .sesso .mF{
+        min-height: 36px;
+    }
+    .errorMessage{
+        font-size: 14px;
+    }
+    h2{
+       font-size:  20px;
+    }
+}
+
+
