@@ -45,8 +45,10 @@
     function resetForm(){
         nameField.value = "";
         lastNameField.value = "";
-        dateOfBirthField.value = "";
-        sexField.checked = false;
+        dateOfBirthField.valueAsDate = new Date();
+        sexField.forEach(sex =>{
+            sex.checked =false;
+        });
     }
 
     function hideErrors(){
@@ -279,10 +281,10 @@
             codiceFiscale.children['codice-fiscale'].textContent = codiceFiscaleCompleto;
             codiceFiscale.style.display = "flex"
 
-
+            resetForm();
         }
 
-        resetForm();
+
     })
     jQueryPaesiEsteri.on('select2:select', function (e) {
         e.preventDefault();
@@ -592,7 +594,11 @@
             setErrorMessage(errLastName,"Non è un valido Cognome");
             checker =false;
         }
-        if (dateOfBirthField.value==='' || dateOfBirthField.valueAsDate === new Date()){
+        console.log(dateOfBirthField.value)
+
+        const todayDate = new Date();
+        console.log(`${todayDate.getFullYear()}-${Number(todayDate.getMonth()) < 10 ? "0"+Number(todayDate.getMonth()+1):todayDate.getMonth()}-${todayDate.getDate()}`)
+        if (dateOfBirthField.value === '' || dateOfBirthField.value === `${todayDate.getFullYear()}-${Number(todayDate.getMonth()) < 10 ? "0"+Number(todayDate.getMonth()+1):todayDate.getMonth()}-${todayDate.getDate()}`){
             setErrorMessage(errDateOfBirth,"La data di Nascita non è valida")
             console.log(dateOfBirthField.value)
             checker = false;
