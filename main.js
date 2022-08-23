@@ -22,6 +22,7 @@
     const jQueryComuniDiNascita = $('select#comuneDiNascita');
     const foreignCountries = document.getElementById("paesiEsteri");
     const comuniItaliani = document.getElementById("comuneDiNascita");
+    dateOfBirthField.valueAsDate = new Date();
 /*    const provinciaComuneSiglaField = document.getElementById("provinciaComuneSigla");*/
     async function listaPaesi(){
         const data  = await fetch("./listaPaesiEsteri.json").then(response => response.json())
