@@ -25,7 +25,7 @@
     dateOfBirthField.valueAsDate = new Date();
 /*    const provinciaComuneSiglaField = document.getElementById("provinciaComuneSigla");*/
     async function listaPaesi(){
-        const data  = await fetch("./listaPaesiEsteri.json").then(response => response.json())
+        const data  = await fetch("./static/data/listaPaesiEsteri.json").then(response => response.json())
         data.forEach(paese =>{
             foreignCountries.insertAdjacentHTML("beforeend",`<option value=${paese["Denominazione "]} codice=${paese["Codice Catastale "]}>${paese["Denominazione "]}</option>`)
         })
@@ -33,7 +33,7 @@
 
 
     async function liStaComuni(){
-        const data  = await fetch("./comuniItalia.json").then(response => response.json())
+        const data  = await fetch("./static/data/comuniItalia.json").then(response => response.json())
         data.forEach(paese =>{
             comuniItaliani.insertAdjacentHTML("beforeend",`<option value=${paese["DESCRIZIONE COMUNE"]} sigla=${paese["SIGLA"]} codice=${paese["CODICE BELFIORE"]}>${paese["DESCRIZIONE COMUNE"]}</option>`)
         })
@@ -591,7 +591,7 @@
             setErrorMessage(errLastName,"Non è un valido Cognome");
             checker =false;
         }
-        if (dateOfBirthField.value===''){
+        if (dateOfBirthField.value==='' || dateOfBirthField.valueAsDate === new Date()){
             setErrorMessage(errDateOfBirth,"La data di Nascita non è valida")
             console.log(dateOfBirthField.value)
             checker = false;
