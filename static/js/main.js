@@ -38,6 +38,7 @@
             comuniItaliani.insertAdjacentHTML("beforeend",`<option value=${paese["DESCRIZIONE COMUNE"]} sigla=${paese["SIGLA"]} codice=${paese["CODICE BELFIORE"]}>${paese["DESCRIZIONE COMUNE"]}</option>`)
         })
     }
+
     listaPaesi();
     liStaComuni();
 
