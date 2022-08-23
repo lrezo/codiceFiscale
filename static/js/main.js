@@ -63,7 +63,6 @@
         nameElement.textContent=message;
     }
     codiceFiscale.style.display="none";
-    console.log(codiceFiscale)
     form.addEventListener("submit", (e)=>{
 
         e.preventDefault();
@@ -72,15 +71,12 @@
         if (isTheFormValid){
             const genderField = document.querySelector("input[type=radio]:checked");
 
-            console.log(nameField.value);
-            console.log(lastNameField.value);
-            console.log(dateOfBirthField.value);
+
             let regex = /\s/g;
             let regex1 = /[^A-Za-z]/;
             const lastNameFieldValue = lastNameField.value.replace(regex,"").replace(regex1,"").toUpperCase().split("");
             const nameFieldValue = nameField.value.replace(regex,"").replace(regex1,"").toUpperCase().split("");
             const dataDiNascitaSenzaFormat = dateOfBirthField.value.replaceAll("-","");
-            console.log(dataDiNascitaSenzaFormat)
             const giornoNascita = dataDiNascitaSenzaFormat.substring(6,8);
             const meseNascita = dataDiNascitaSenzaFormat.substring(4,6);
             const annoNascita = dataDiNascitaSenzaFormat.substring(2,4);
@@ -123,7 +119,6 @@
                 }
             }
             else if (cognomeConsonanti.length === 0){
-                console.log(cognomeVocali)
                 if (cognomeVocali.length >=3){
                     for (let i = 0; i < 3; i++) {
                         codiceFiscaleParteCognome+=cognomeVocali[i];
@@ -594,13 +589,10 @@
             setErrorMessage(errLastName,"Non è un valido Cognome");
             checker =false;
         }
-        console.log(dateOfBirthField.value)
 
         const todayDate = new Date();
-        console.log(`${todayDate.getFullYear()}-${Number(todayDate.getMonth()) < 10 ? "0"+Number(todayDate.getMonth()+1):todayDate.getMonth()}-${todayDate.getDate()}`)
         if (dateOfBirthField.value === '' || dateOfBirthField.value === `${todayDate.getFullYear()}-${Number(todayDate.getMonth()) < 10 ? "0"+Number(todayDate.getMonth()+1):todayDate.getMonth()}-${todayDate.getDate()}`){
             setErrorMessage(errDateOfBirth,"La data di Nascita non è valida")
-            console.log(dateOfBirthField.value)
             checker = false;
         }
         if (!sexField[0].checked && !sexField[1].checked){
