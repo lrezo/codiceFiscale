@@ -28,7 +28,7 @@ footer{
     width: 50%;
 }
 main{
-    width: 50%;
+    width: 40%;
     margin: auto;
 }
 select{
@@ -71,8 +71,11 @@ fieldset{
     flex-direction: row;
     gap: 1rem;
     justify-content: space-between;
-    width: 100%;
+    width: auto;
     margin: 0 auto 1rem;
+    border: 1px solid #444;
+    border-radius: 3px;
+    padding: .5rem;
 }
 .dataDiNascita{
     width: 100%;
@@ -87,7 +90,7 @@ fieldset{
 .sesso{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
     width: 100%;
 }
@@ -133,6 +136,10 @@ button[type=submit]{
     border: 1px solid gray;
     border-radius: 3px;
     color: black!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
 }
 button[type=submit]:hover{
     height: 49px;
@@ -169,8 +176,11 @@ button[type=submit]:active{
 .codiceFiscale h2{
     word-break: break-word;
 }
+form{
+    border-color: #444!important;
+}
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 600px){
     .dataDiNascitaSesso{
         flex-wrap: wrap;
 

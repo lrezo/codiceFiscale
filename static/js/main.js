@@ -4,7 +4,9 @@
 (function (){
     $(document).ready(function () {
 //change selectboxes to selectize mode to be searchable
-        $("select").select2();
+        $("select").select2({
+            containerCss : {"display":"flex"}
+        });
 
     });
 
